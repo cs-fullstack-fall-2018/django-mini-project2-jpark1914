@@ -1,0 +1,16 @@
+<h1>Here Are The PlayList Songs</h1>
+{% if playlist_songs %}
+<ul>
+    {% for song in playlist_songs %}
+    <li>{{ song.songName }}</li>
+    <li>{{ song.album }}</li>
+    <li>{{ song.artist }}</li>
+    <li>{{ song.duration }}</li>
+    <li>{{ song.rating }}</li>
+    <hr/>
+
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
